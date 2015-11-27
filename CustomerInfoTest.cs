@@ -30,5 +30,12 @@ namespace EmailGenerator
             CustomerInfo customer = new CustomerInfo(lastName:"LastName");
             Assert.AreEqual("LastName", customer.CustomerLastName());
         }
+
+        [Test]
+        public void CustomerInfoContainsAddress()
+        {
+            CustomerInfo customer = new CustomerInfo(address:"123 Fake St.");
+            Assert.AreEqual("123 Fake St.", customer.CustomerAddress());
+        }
     }
 }

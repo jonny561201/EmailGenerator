@@ -11,12 +11,14 @@ namespace EmailGenerator
         private string customerFirstName { get; set;}
         private string customerEmail { get; set; }
         private string customerLastName { get; set; }
+        private string customerAddress { get; set; }
 
-        public CustomerInfo(string firstName ="", string email = "", string lastName = "")
+        public CustomerInfo(string firstName ="", string email = "", string lastName = "", string address = "")
         {
             customerFirstName = firstName;
             customerEmail = email;
             customerLastName = lastName;
+            customerAddress = address;
         }
 
         public string CustomerFirstName()
@@ -32,6 +34,11 @@ namespace EmailGenerator
         public string CustomerLastName()
         {
             return customerLastName;
+        }
+
+        internal object CustomerAddress()
+        {
+            return customerAddress;
         }
     }
 }
