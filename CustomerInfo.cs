@@ -8,23 +8,30 @@ namespace EmailGenerator
 {
     class CustomerInfo
     {
-        private string customerName { get; set;}
+        private string customerFirstName { get; set;}
         private string customerEmail { get; set; }
+        private string customerLastName { get; set; }
 
-        public CustomerInfo(string name ="", string email = "")
+        public CustomerInfo(string firstName ="", string email = "", string lastName = "")
         {
-            customerName = name;
+            customerFirstName = firstName;
             customerEmail = email;
+            customerLastName = lastName;
         }
 
-        public string CustomerName()
+        public string CustomerFirstName()
         {
-            return customerName;
+            return customerFirstName;
         }
 
         public string CustomerEmail()
         {
             return customerEmail;
+        }
+
+        public string CustomerLastName()
+        {
+            return customerLastName;
         }
     }
 }
